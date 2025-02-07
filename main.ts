@@ -4,19 +4,18 @@
  * See if you can spot them!
  */
 /**
- * The goal here is to create the cars brain. 
+ * When A is pressed down, the car goes left
  * 
- * The Car will only do what it knows how to do, the radio received block contains the different instructions the car can take currently.
+ * When B is pressed down, the car goes right
  * 
- * s = stop
+ *  
  * 
- * l = left
+ * When either button (A or B) is released, the car stops
+ */
+/**
+ * See if you can add more improvements here!
  * 
- * r = right
- * 
- * You can add more functionality by extending the if statement with the plus button.
- * 
- * You need to add the final piece which is driving the car forward
+ * See if you can make the car reverse!
  */
 control.onEvent(EventBusSource.MICROBIT_ID_BUTTON_A, EventBusValue.MICROBIT_BUTTON_EVT_UP, function () {
     radio.sendValue("s", 0)

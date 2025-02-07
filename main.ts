@@ -18,23 +18,10 @@
  * 
  * You need to add the final piece which is driving the car forward
  */
-/**
- * Hint: (code improvement) - Optional
- * 
- * Moving the car left and right by stopping one wheel is good
- * 
- * but...
- * 
- * you could use some fancy maths or change the motor direction to make it the car spin on the spot.
- */
-/**
- * This button A pressed wont be used often, 
- * 
- * The reason it is here is so that you can debug if you have issues with your cars motors
- * 
- * If the motors do not spin after pressing A you could have a hardware problem.
- */
 control.onEvent(EventBusSource.MICROBIT_ID_BUTTON_A, EventBusValue.MICROBIT_BUTTON_EVT_UP, function () {
+    radio.sendValue("s", 0)
+})
+control.onEvent(EventBusSource.MICROBIT_ID_BUTTON_AB, EventBusValue.MICROBIT_BUTTON_EVT_UP, function () {
     radio.sendValue("s", 0)
 })
 control.onEvent(EventBusSource.MICROBIT_ID_BUTTON_AB, EventBusValue.MICROBIT_BUTTON_EVT_DOWN, function () {
